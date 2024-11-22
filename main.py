@@ -17,7 +17,7 @@ class Book:
     title: str
     author: str
     year: int
-    status: str = 'В наличие'
+    status: str = 'В наличии'
 
 
 def init_args_parser() -> argparse.ArgumentParser:
