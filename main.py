@@ -157,12 +157,12 @@ def main() -> int:
     if args.subcommand == 'add':
         book_id = add_book(args.title, args.author, args.year)
         print(f'INFO: The book has been successfully added with id `{book_id}`')
-    elif args.subcommand == 'del':
+    elif args.subcommand == 'delete':
         try:
             delete_book(args.id)
             print('INFO: The book has been successfully deleted.')
         except BookNotFoundError:
-            print('ERROR: Book not found!')
+            print('ERROR: The book was not found!')
     elif args.subcommand == 'search':
         if all((not args.title, not args.author, not args.year)):
             parser.error('No options was provided. Use -h to full information about subcommand.')
